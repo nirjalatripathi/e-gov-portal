@@ -7,22 +7,22 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="header">
-    <h1> E-government Portal</h1>
-    <input type="text" placeholder="Search services">
+<body class="bg-gray-100">
+  <header class="header flex justify-between items-center p-4 bg-blue-900 text-white ">
+    <h1 class=""text-2xl font-bold> E-government Portal</h1>
+    <input id="serviceSearch" type="text" placeholder="Search services" class="p-2 rounded text-black">
   </header>
   
-  <main class="container">
-    <h2> Citizen Services </h2>
-    <div class="cards">
-      <a href="census.html" class="card"> Population Census</a>
-      <a href="voting.html" class="card"> Online Voting</a>
-      <a href="allowance.html" class="card"> Old Age Allowance </a>
+  <main class="container max-w-4xl">
+    <h2 class="text-xl font-semibold mb-6 text-center"> Citizen Services </h2>
+    <div class="cards flex justify-center gap-6 ">
+      <a href="census.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Population Census</a>
+      <a href="voting.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Online Voting</a>
+      <a href="allowance.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Old Age Allowance </a>
     </div>
   </main>
   
-  <footer class="footer">
+  <footer class="footer text-center text-gray-600 p-4">
     <p> &copy 2026 Digital Government Initiative </p>
   </footer>
 </body>
