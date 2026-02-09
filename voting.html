@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online voting</title>
+    <!--CSS Linking-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Tailwind CSS-->
+  <script src="https://cdn.tailwindcss.com"> </script>
+</head>
+<body class="bg-gray-200">
+
+<!--Header section-->
+    <header class="header p-4 bg-blue-800 text-white text-center">
+        <h1 class="text-2xl font-bold"> Voting Form </h1>
+        <p class= "text-sm"> Digital Voting Selection </p>
+    </header>
+    
+    <!--Voting form Container-->
+    <div class="container max-w-md bg-white p-6 rounded-lg shadow mt-6"> 
+        
+        <!--Error Message-->
+        <p id="VoteError" class="text-red-600 mb-2 hidden"> Please fill the required forms </p>
+
+        <!--Citizenship Number-->
+        <input id="citizenship" type="text" placeholder="Citizenship Number" class="p-2 border rounded w-full mb-3">
+        
+        <!--Full name-->
+        <input id="VoterName" type="text" placeholder="Full Name" class="p-2 border rounded w-full mb-3">
+       
+        <!--Age-->
+        <input id="VoterAge" type="text" placeholder="Age" class="p-2 border rounded w-full mb-3">
+
+         <!-- District -->
+    <input id="district" type="text" placeholder="Voting District" class="p-2 border rounded w-full mb-3">
+      
+    <!--Voter Id-->
+    <input id="VoterID" type="text" placeholder="Voter ID number" class="p-2 border rounded w-full mb-3">
+    
+    <!--Politicsl Party selection-->
+    <select id="party" class="p-2 text-gray-400 border rounded w-full mb-3">
+            <option value="" > Select Party</option>
+            <option> Party A </option>
+             <option> Party B </option>
+              <option> Party C </option>
+              <option> Party D </option>
+              <option> Party E </option>
+        </select>
+
+        <!--Submit Button-->
+        <button onclick="submitVote()" class="bg-green-600 text-white p-2 w-full rounded hover:bg-blue-800"> Vote</button>
+
+    </div>
+</body>
+</html>
