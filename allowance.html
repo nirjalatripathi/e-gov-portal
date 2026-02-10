@@ -16,21 +16,45 @@
     <!--Header Section-->
     <header class="header p-4 bg-blue-900 text-white text-center">
         <h1 class="text-2xl font-bold"> Old Age Allowance</h1>
+        <p class="text-sm mt-1"> Apply digitally without visiting office</p>
     </header>
     
-    <!--Main Class-->
-    <main class="container max-w-md mx-auto mt-8 bg-white p-6 rounded shadow">
+    <!--Main form -->
+    <main class=" max-w-lg mx-auto mt-8 bg-white p-6 rounded-lg shadow">
+
+        <!--Info message -->
+        <p class="text-gray-600 text-sm mb-4 text-center">
+            Please fill all details correctly. </p>
+
+            <!--Erroe/ Success message-->
+            <p id="allowMsg" class="hidden text-center mb-4"> </p>
        
         <!--Allowance Form-->
         <form id="allowanceForm">
-            <input type="text" id="allowName" placeholder="Full Name">
-            <input type="text" id="allowCitizen" placeholder="Citizenship Number">
-            <input type="text" id="allowAge"placeholder="Age">
-            <input type="text" id="bank" placeholder="Bank Account Number">
+            <input type="text" id="allowName" placeholder="Full Name" class="w-full p-3 border rounded">
+            <input type="text" id="allowCitizen" placeholder="Citizenship Number" class="w-full p-3 border rounded">
+            <input type="text" id="allowAge"placeholder="Age" class="w-full p-3 border rounded">
+            
+             <select id="allowGender" class="w-full p-3 border rounded text-gray-400">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+                </select>
+                
+            <input type="text" id="bankName" placeholder="Bank Name" class="w-full p-3 border rounded">
+            <input type="text" id="bankAccount" placeholder="Bank Account Number" class="w-full p-3 border rounded">
+             <input type="text" id="mobile" placeholder="Mobile Number" class="w-full p-3 border rounded">
 
-            <button type="submit"> Apply for Allowance </button>
-            </form>
 
+<!--Submit Button-->
+     <button type="submit" class="w-full bg-green-600 text-white p-3 rounded hover:bg-green-800"> Apply for Allowance </button>
+     </form>
     </main>
+
+    <!--Footer-->
+    <footer class="text-center text-gray-500 text-sm mt-10 mb-4">
+        &copy 2026 Digital Government Initiative
+    </footer>
 </body>
 </html>
