@@ -36,13 +36,13 @@ if (censusForm) {
         e.preventDefault(); //stop page reload
 
         //Get input values
-        const name= document.getElementById("CensusName").value.trim();
-        const address= document.getElementById("CensusAddress").value.trim();
-        const family= document.getElementById("FamilyCount").value;
+        const name= document.getElementById("censusName").value.trim();
+        const address= document.getElementById("censusAddress").value.trim();
+        const family= document.getElementById("familyCount").value;
 
         // Basic validation
         if (!name|| !address|| !family) {
-            alert ("PLease fill all census details.");
+            alert ("Please fill all census details.");
             return;
         }
         if (family <=0) {
@@ -50,7 +50,7 @@ if (censusForm) {
             return;
         }
         alert("Census submitted successfully.");
-        censusForm.requestFullscreen(); // Clear form 
+        censusForm.reset(); // Clear form 
 
     });
 }
@@ -63,11 +63,11 @@ if (allowanceForm) {
         //Get form values
         const name= document.getElementById("allowName").value.trim();
         const citizen= document.getElementById("allowCitizen").value.trim();
-        const age= document.getElementById("allowAge").value.trim();
+        const age= parseInt(document.getElementById("allowAge").value);
         const bankName= document.getElementById("bankName").value.trim();
         const bankAcc= document.getElementById("bankAccount").value.trim();
          const mobile= document.getElementById("mobile").value.trim();
-         const messageBox= document.getElementById("allowMsg").value.trim();
+         const messageBox= document.getElementById("allowMsg");
 // Check empty fields
 if (!name || !citizen || !age || !bankName || !bankAcc || !mobile) {
     messageBox.className= "text-red-600 text-center mb-4";
@@ -83,7 +83,7 @@ if (age < 60) {
     return;
 }
 //Mobile number length check 
-if (mobile.lenght !==10) {
+if (mobile.length!==10) {
     messageBox.className="text-red-600 text-center mb-4";
     messageBox.textContent="Mobile number must be 10 digits";
     messageBox.classList.remove("hidden");
@@ -104,40 +104,46 @@ function submitVote() {
     //Get voting form values
 const citizenship= document.getElementById("citizenship").value.trim();
 const name= document.getElementById("VoterName").value.trim();
-const age= parseINt(document.getElementById("VoterAge").value);
+const age= parseInt(document.getElementById("VoterAge").value);
 const district= document.getElementById("district").value.trim();
 const voterID= document.getElementById("VoterID").value.trim();
 const party= document.getElementById("party").value;
-const errorBox= document.getElementById("VoteError").value;
+const errorBox= document.getElementById("VoteError");
 //Clear previous message color
 errorBox.classList.remove("text-green-600");
 errorBox.classList.add("text-red-600");
+ errorBox.classList.remove("hidden");
 
-// Check if user already voted using LocalStorage
-if (localStorage.getItem("hasVoted")) {
-    errorBox.textContent="You have already voted. Multiple voting is not allowed";
-    errorBox.classList.remove("hidden");
-return;
-}
 //Required fields validation
 if (!citizenship || !name || !age || !district || !voterID || !party) {
     errorBox.textContent= "Please fill all required voting details."
-    errorBox.classList.remove("hidden");
     return;
 }
 //Age validation
 if (age <18) {
     errorBox.textContent=" You must be at least 18 years old to vote";
-    errorBox.classList.remove("hidden");
     return;  
 }
+// Check if already voted
+if (localStorage.getItem("hasVoted") === "true") {
+    errorBox.textContent = "You have already voted. Multiple voting is not allowed.";
+    return;
+  }
 
-//Sve voting status in browser storage
+//Save voting status in browser storage
 localStorage.setItem("hasVoted", true);
+
+//Confirmation 
+const confirmVote = confirm("Are you sure you want to submit your vote?");
+if (!confirmVote) {
+  return;
+}
+
+
 
 //Show success message
 errorBox.classList.remove("text-red-600");
 errorBox.classList.add("text-green-600");
 errorBox.textContent="Vote submitted successfully. Thankyou for voting!";
-errorBox.classList.remove("hidden");
+
 }

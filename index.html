@@ -15,25 +15,149 @@
 <body class="bg-gray-100">
 
   <!--Header-->
-  <header class="header flex justify-between items-center p-4 bg-blue-900 text-white ">
-    <h1 class="text-2xl font-bold"> E-government Portal</h1>
+  <header class="flex justify-between items-center p-4 bg-blue-900 text-white ">
+    <div class="flex items-center space-x-3">
+      <img src="https://i.pinimg.com/1200x/fb/53/bc/fb53bccf6afabb13215ede4a6b10439a.jpg" alt="Government Logo" class="h-14 w-14 rounded-full">
+    </div>
+    <h1 class="text-2xl font-bold">NATIONAL E-GOVERNMENT PORTAL</h1>
     <input id="serviceSearch" type="text" placeholder="Search services" class="p-2 rounded text-black">
   </header>
-  <!-- Main content showing available government services-->
-  <main class="container max-w-4xl">
-    <h2 class="text-xl font-semibold mb-6 text-center"> Citizen Services </h2>
+
+  <!--Hero Section-->
+  <section class="bg-blue-800 text-white py-6" >
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-xl font-bold mb-2">
+        DIGITAL SERVICES FOR CITIZENS
+      </h2>
+      <p class ="text-lg text-gray-200">
+        Access essential government services online safely and securely.
+        Fast, Transparent and citizen-friendly.
+      </p>
+    </div>
+  </section>
+  
+  <!--Services Section-->
+  <main class="max-w-6xl mx-auto py-12">
+    <h3 class="text-2xl font-semibold text-center mb-10">
+      Available Services
+    </h3>
+    <div class="grid md:grid-cols-3 gap-8">
     
     <!-- Government Services links-->
-    <div class="cards flex justify-center gap-6 ">
-      <a href="census.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Population Census</a>
-      <a href="voting.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Online Voting</a>
-      <a href="allowance.html" class="card bg-white p-6 rounded-lg shadow hover:shadow-lg text-center font-bold w-64"> Old Age Allowance </a>
+     <!--CENSUS CARD-->
+      <a href="census.html" class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition text-center">
+        <h4 class="text-xl font-bold mb-2">Population Census</h4>
+      <p class="text-gray-600">
+        Submit household and demographic information digitally.
+      </p>
+      </a>
+
+      <!--VOTING CARD-->
+      <a href="voting.html" class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition text-center">
+        <h4 class="text-xl font-bold mb-2">Online Voting</h4>
+      <p class="text-gray-600">
+        Secure digital voting system for eligible citizens.
+      </p>
+      </a>
+
+      <!--ALLOWANCE CARD-->
+      <a href="allowance.html" class="bg-white p-6 rounded-xl shadow hover:shadow-2xl transition text-center">
+        <h4 class="text-xl font-bold mb-2">Old Age Allowance</h4>
+      <p class="text-gray-600">
+        Apply for senior citizen financial assistance online.
+      </p>
+      </a>
     </div>
   </main>
+  
+  <!--Public Notice Section-->
+  <section class="bg-gray-200 py-10">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-2xl font-semibold mb-6">
+        Office Notice & Information
+      </h3>
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-bold mb-2"> Public Announcement</h4>
+          <p class="text-sm text-gray-600">
+            All citizens must complete digital census submission before December 31.
+          </p>
+        </div>
 
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-bold mb-2"> Data Protection Policy</h4>
+          <p class="text-sm text-gray-600">
+            Your personal information is securely encrypted and used only for office purposes. 
+          </p>
+        </div>
+
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class=" font-bold mb-2"> Transparency Report</h4>
+          <p class="text-sm text-gray-600">
+            Government service statistics and reports are available to ensure accountability.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Contact Section-->
+  <section class="py-8 bg-gray-100">
+  <div class="max-w-3xl mx-auto px-2">
+    <h2 class="text-3xl font-bold text-center mb-4">Contact & Support</h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <div>
+        <p class="mb-2"> Ministry of Digital Governance, Kathmandu</p>
+        <p class="mb-2"> Toll Free: 1111</p>
+        <p class="mb-2">✉ support@egov.gov.np</p>
+        <p> Office Hours: 10 AM - 5 PM (Sun–Fri)</p>
+      </div>
+
+      <form class="bg-white p-4 rounded shadow space-y-3">
+        <input type="text" placeholder="Full Name" class="w-full p-2 border rounded">
+        <input type="email" placeholder="Email Address" class="w-full p-2 border rounded">
+        <textarea placeholder="Your Message" class="w-full p-2 border rounded"></textarea>
+        <button class="bg-green-900 text-white px-4 py-2 rounded hover:bg-blue-700">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+  
+    
   <!-- Footer section-->
-  <footer class="footer text-center text-gray-600 p-4">
-    <p> &copy 2026 Digital Government Initiative </p>
+  <footer class="bg-blue-900 text-white py-4 mt-8">
+    <div class="max-w-4xl mx-auto px-4 grid md:grid-cols-3 gap-6 text-center space-y-2">
+       <div>
+      <h4 class="font-semibold mb-2">Government Information</h4>
+      <p>Ministry of Digital Governance</p>
+      <p>Singha Durbar, Kathmandu</p>
+      <p>Established: 2026 Digital Initiative</p>
+    </div>
+      <div> 
+        <h4 class="font-semibold mb-2"> Legal</h4>
+        <p> Privacy Policy</p>
+        <p> Terms & Conditions</p>
+        <p> Data Protection</p>
+      </div>
+      <div> 
+        <h4 class="font-semibold mb-2"> Emergency</h4>
+        <p> Police:100</p>
+        <p> Ambulance:102</p>
+        <p> Fire:101</p>
+        </div>
+
+      </div>
+      <p class="font-semibold text-center text-md mt-4"> Digital Government Initiative</p>
+    <p class=" text-center text-xs mt-6 border-t border-blue-700 pt-3"> &copy 2026 Government of Nepal | All Rights Reserved </p>
+  </div>
   </footer>
+ 
 </body>
 </html>
