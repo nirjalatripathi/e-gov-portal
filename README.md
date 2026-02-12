@@ -23,9 +23,9 @@ This project proposes a digital solution where essential public services can be 
   - Digital voting form for citizens
   - Allows only one vote per user
 - Old Age Allowance
- - Online application for senior citizens
- - Collects personal and bank details
- - Demonstrates digital allowance distribution
+  - Online application for senior citizens
+  - Collects personal and bank details
+  - Demonstrates digital allowance distribution
 ## Design & UI Features
 - Responsive layout using Tailwind CSS
 - Nepal National Logo in header
