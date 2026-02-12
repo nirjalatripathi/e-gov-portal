@@ -19,10 +19,10 @@ This project proposes a digital solution where essential public services can be 
   - Online form for collecting citizens details
   - Collects household and population data
   - Reduces manual door-to-door data collection
--Online Voting
+- Online Voting
   - Digital voting form for citizens
   - Allows only one vote per user
--Old Age Allowance
+- Old Age Allowance
  - Online application for senior citizens
  - Collects personal and bank details
  - Demonstrates digital allowance distribution
